@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 20150806195336) do
 
   create_table "items", force: :cascade do |t|
     t.string   "title"
-    t.string   "description"
-    t.integer  "zipcode"
+    t.string   "description", limit: 120
+    t.integer  "zipcode",     limit: 8
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "users", force: :cascade do |t|

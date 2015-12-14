@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 20150806195336) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "books", force: :cascade do |t|
+  create_table "items", force: :cascade do |t|
     t.string   "title"
-    t.string   "isbn"
+    t.string   "description"
+    t.integer  "zipcode"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,4 +36,5 @@ ActiveRecord::Schema.define(version: 20150806195336) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["token"], name: "index_users_on_token", unique: true, using: :btree
 
+  add_foreign_key "items", "users"
 end

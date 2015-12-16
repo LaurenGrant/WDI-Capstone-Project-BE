@@ -1,0 +1,9 @@
+<h1>Edit Item</h1>
+
+<%= simple_form_for @item, :html => { :multipart => true} do |f| %>
+ <%= f.file_field :item_image %>
+ <%= f.input :title %>
+ <%= f.input :zipcode %>
+ <%= f.input :description %>
+ <%= f.button :submit, :class => "btn-custom2" %>
+<% end %>

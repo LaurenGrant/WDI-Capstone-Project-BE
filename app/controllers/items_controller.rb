@@ -48,7 +48,7 @@ class ItemsController < OpenReadController
   end
 
   def item_params
-    params.require(:item).permit(:title, :description, :zipcode)
+    params.require(:item).permit(:title, :description, :zipcode, :item_image)
   end
 
   private :set_item, :item_params

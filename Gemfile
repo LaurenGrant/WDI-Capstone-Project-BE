@@ -21,6 +21,15 @@ gem 'bcrypt', '~> 3.1.7'
 # Help with JSON serialization
 gem 'active_model_serializers'
 
+# Paperclip - Load images and AWS
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+gem 'aws-sdk', '~> 1.6'
+
+gem 'aws-sdk-v1'
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
 group :development do
   # Use pry over irb for rails console
   gem 'pry-rails'

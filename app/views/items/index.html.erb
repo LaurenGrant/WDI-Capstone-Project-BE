@@ -1,0 +1,5 @@
+<%= @items.each do |item| %>
+  <a href="/items/<%= item.id %>">
+    <%= image_tag item.item_image.url(:item_index) %>
+  </a>
+<%= end %>

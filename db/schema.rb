@@ -19,7 +19,8 @@ ActiveRecord::Schema.define(version: 20151216143831) do
   create_table "items", force: :cascade do |t|
     t.string   "title"
     t.string   "description",             limit: 120
-    t.integer  "zipcode",                 limit: 8
+    t.string   "zipcode",                 limit: 5
+    t.string   "phone_number"
     t.integer  "user_id"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
